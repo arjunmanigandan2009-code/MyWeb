@@ -1393,12 +1393,211 @@ section {
         gap: 15px;
     }
     
+    .section-title {
+        font-size: 2rem;
+    }
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    .hero-card {
+        transform: none;
+    }
     .contact-form {
         padding: 24px;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 14px 14px 14px 42px;
+        font-size: 0.9rem;
+    }
+    .portfolio-filters {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .filter-btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+    .portfolio-image-placeholder {
+        height: 180px;
+    }
+    .testimonial-slider-container {
+        padding: 0 20px;
+    }
+    .testimonial-text {
+        font-size: 1rem;
+    }
+    .slider-controls {
+        gap: 12px;
+    }
+    .info-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .info-details {
+        gap: 16px;
+    }
+    .about-info h3 {
+        font-size: 1.4rem;
     }
     .footer-content {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+    }
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .glow-sphere {
+        width: 200px;
+        height: 200px;
+    }
+    .contact-info h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+    section {
+        padding: 60px 0 40px;
+    }
+    .section-header {
+        margin-bottom: 40px;
+    }
+    .section-title {
+        font-size: 1.6rem;
+    }
+    .section-tagline {
+        font-size: 0.75rem;
+    }
+    .hero-section {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 80px;
+        gap: 30px;
+    }
+    .hero-title {
+        font-size: 1.7rem;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    .hero-visual {
+        display: none;
+    }
+    .badge {
+        font-size: 0.7rem;
+    }
+    .scroll-indicator {
+        display: none;
+    }
+    .about-grid, .contact-grid {
+        gap: 30px;
+    }
+    .about-info h3 {
+        font-size: 1.2rem;
+    }
+    .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .metric-num {
+        font-size: 1.8rem;
+    }
+    .skills-card {
+        padding: 24px;
+    }
+    .services-grid {
+        gap: 20px;
+    }
+    .service-card {
+        padding: 28px 20px;
+    }
+    .service-card h3 {
+        font-size: 1.1rem;
+    }
+    .portfolio-grid {
+        gap: 20px;
+    }
+    .portfolio-image-placeholder {
+        height: 160px;
+        font-size: 2.5rem;
+    }
+    .portfolio-details {
+        padding: 18px;
+    }
+    .portfolio-details h3 {
+        font-size: 1rem;
+    }
+    .testimonial-slider-container {
+        padding: 0 10px;
+    }
+    .testimonial-text {
+        font-size: 0.9rem;
+    }
+    .contact-form {
+        padding: 20px;
+    }
+    .form-group label {
+        font-size: 0.75rem;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        padding: 12px 12px 12px 38px;
+        font-size: 0.85rem;
+    }
+    .input-wrapper i {
+        font-size: 0.8rem;
+        left: 14px;
+    }
+    .info-card .icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
+    .info-card p {
+        font-size: 0.9rem;
+    }
+    .social-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 0.95rem;
+    }
+    .slider-btn {
+        width: 36px;
+        height: 36px;
+    }
+    .glow-sphere {
+        width: 150px;
+        height: 150px;
+    }
+    .modal-container {
+        padding: 20px;
+        margin: 0 12px;
+    }
+    .inquiry-header {
+        flex-direction: column;
+        gap: 4px;
+    }
+    .toast {
+        max-width: 280px;
+        right: -300px;
+        bottom: 20px;
+    }
+    .toast.show {
+        right: 16px;
     }
 }
