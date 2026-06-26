@@ -361,32 +361,9 @@ function initInquirySystem() {
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            
-            // Retrieve field values
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value.trim();
-            const timestamp = new Date().toLocaleString();
-            
-            // Build Inquiry entry
-            const newInquiry = { id: Date.now(), name, email, subject, message, timestamp };
-            
-            // Save to localStorage
-            inquiries.unshift(newInquiry);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(inquiries));
-            
-            // Reset form
             form.reset();
-            
-            // Trigger Confetti Celebrations
             triggerConfetti();
-            
-            // Trigger Toast popup
             showToast();
-            
-            // Update Inbox UI list
-            updateInboxUI();
         });
     }
 

@@ -866,12 +866,13 @@ section {
 
 /* --- Contact Section --- */
 .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    gap: 60px;
-    align-items: start;
+    display: flex;
+    justify-content: flex-start;
 }
 
+.contact-info {
+    max-width: 600px;
+}
 .contact-info h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
@@ -1099,6 +1100,14 @@ section {
 .toast-desc {
     font-size: 0.8rem;
     color: var(--text-muted);
+}
+.toast-email {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: underline;
+}
+.toast-email:hover {
+    color: var(--primary);
 }
 
 /* --- Modal Inquiry Dashboard --- */
