@@ -5,7 +5,6 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initCustomCursor();
     initSpotlightCards();
     initParticleNetwork();
     initTypewriter();
@@ -17,61 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-   1. Custom Mouse Cursor
-   ========================================================================== */
-function initCustomCursor() {
-    const cursor = document.getElementById('custom-cursor');
-    const dot = document.getElementById('custom-cursor-dot');
-    
-    if (!cursor || !dot) return;
-
-    let targetX = 0, targetY = 0;
-    let currentX = 0, currentY = 0;
-    
-    // Hide default cursor for standard window movements if custom is preferred
-    // Here we keep standard cursor but let our circles lag/float gracefully
-    document.addEventListener('mousemove', (e) => {
-        targetX = e.clientX;
-        targetY = e.clientY;
-        
-        // Immediate dot tracking
-        dot.style.left = `${targetX}px`;
-        dot.style.top = `${targetY}px`;
-    });
-
-    // Smooth outer circle tracking using linear interpolation
-    function renderCursor() {
-        const ease = 0.15;
-        currentX += (targetX - currentX) * ease;
-        currentY += (targetY - currentY) * ease;
-        
-        cursor.style.left = `${currentX}px`;
-        cursor.style.top = `${currentY}px`;
-        
-        requestAnimationFrame(renderCursor);
-    }
-    renderCursor();
-
-    // Hover state toggles
-    const hoverables = document.querySelectorAll('a, button, .filter-btn, select, input, textarea, .portfolio-item, .service-card');
-    hoverables.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            cursor.classList.add('hoverable-cursor');
-            cursor.style.transform = 'translate(-50%, -50%) scale(1.6)';
-            cursor.style.borderColor = 'var(--secondary)';
-            cursor.style.backgroundColor = 'rgba(140, 80, 255, 0.08)';
-        });
-        item.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hoverable-cursor');
-            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursor.style.borderColor = 'var(--primary)';
-            cursor.style.backgroundColor = 'transparent';
-        });
-    });
-}
-
-/* ==========================================================================
-   2. Card Spotlight Hover Effect (Glass Glow)
+   1. Card Spotlight Hover Effect (Glass Glow)
    ========================================================================== */
 function initSpotlightCards() {
     const cards = document.querySelectorAll('.glass-card');

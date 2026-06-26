@@ -152,36 +152,6 @@ section {
     border-radius: 10px;
 }
 
-/* --- Interactive Elements & Custom Cursor --- */
-#custom-cursor {
-    width: 25px;
-    height: 25px;
-    border: 1.5px solid var(--primary);
-    border-radius: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9999;
-    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
-}
-#custom-cursor-dot {
-    width: 5px;
-    height: 5px;
-    background-color: var(--secondary);
-    border-radius: 50%;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    z-index: 9999;
-}
-
-.hoverable:hover ~ #custom-cursor {
-    width: 45px;
-    height: 45px;
-    background-color: rgba(140, 80, 255, 0.1);
-    border-color: var(--secondary);
-}
-
 /* --- Glassmorphism Card System --- */
 .glass-card {
     background: var(--glass-bg);
